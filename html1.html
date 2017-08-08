@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<title>HTML AND CSS</title>
+<style>
+body{
+  color:blue;
+  background-color:yellow;
+  font-style:italic;
+}
+
+</style>
+<script type="text/javascript">
+
+    function vidplay() {
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("play");
+       if (video.paused) {
+          video.play();
+          button.textContent = "||";
+       } else {
+          video.pause();
+          button.textContent = ">";
+       }
+    }
+
+    function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+    }
+
+    function skip(value) {
+        var video = document.getElementById("Video1");
+        video.currentTime += value;
+    }
+</script>
+</head>
+<body>
+<h1> This is a website for HTML and CSS course</h1>
+<ul>
+   <ol>
+     <button onclick="myFunction()">Introduction to html</button>
+<video id="Video1" >
+//  Replace these with your own video files.
+     <source src="html.mp4" type="video/mp4" />
+     <source src="html.ogv" type="video/ogg" />
+     HTML5 Video is required for this example.
+     <a href="html.mp4">Download the video</a> file.
+</video>
+
+<div id="buttonbar">
+    <button id="restart" onclick="restart();">[]</button>
+    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+    <button id="play" onclick="vidplay()">&gt;</button>
+    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+</div>
+
+
+   <li>An introduction to CSS</li>
+        <li>Separating styling-classe's,div's,span's,id's </li>
+        <li>Positioning</li>
+        <li>HTML forms</li>
+
+
+</ol>
+</ul>
+</body>
+
+
+</html>
